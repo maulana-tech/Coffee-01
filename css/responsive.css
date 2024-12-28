@@ -322,23 +322,38 @@
 	============================================================================================ */
     /* Footer Area css
 	============================================================================================ */
-    .footer-area {
-        padding: 70px 0px;
+
+    #google-map,
+    .footer-info {
+      margin-bottom: 50px;
     }
-    .footer-bottom {
-        padding-top: 50px;
+
+    footer {
+      padding: 60px 0;
+      padding-bottom: 60px;
     }
-    /* End End Footer Area css
-	============================================================================================ */
-    .pad_top {
-        padding-top: 70px;
+
+    .footer-open-hour {
+      right: 0;
+      bottom: 0;
+      margin-top: 30px;
     }
-    .pad_btm {
-        padding-bottom: 70px;
+  }
+
+
+  @media only screen and (max-width: 580px) {
+    h1 {
+      font-size: 2.1em;
     }
-    .table_form {
-        padding: 50px 20px;
+
+    h2 {
+      font-size: 1.8em;
     }
+
+    .menu-thumb .menu-info {
+      top: 60%;
+    }
+  
 }
 
 @media (max-width:480px) {
