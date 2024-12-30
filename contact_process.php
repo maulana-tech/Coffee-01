@@ -1,37 +1,43 @@
 <?php
 
-    $to = "rockybd1995@gmail.com";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $number = $_REQUEST['number'];
-    $cmessage = $_REQUEST['message'];
+// Ambil data dari formulir
+$to = "firdaussyah03@gmail.com";
+$from = $_REQUEST['email'];
+$name = $_REQUEST['name'];
+$subject = "New Booking Request"; // Default subject
+$booking_date = $_REQUEST['booking_date'];
+$booking_time = $_REQUEST['booking_time'];
+$number_of_people = $_REQUEST['number_of_people'];
+$event_type = $_REQUEST['event_type'];
+$cmessage = $_REQUEST['message'];
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+// Header email
+$headers = "From: $from\r\n";
+$headers .= "Reply-To: $from\r\n";
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    $subject = "You have a message from your Bitmap Photography.";
+// Body email
+$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Booking Request</title></head><body>";
+$body .= "<h2>New Booking Request</h2>";
+$body .= "<p><strong>Name:</strong> $name</p>";
+$body .= "<p><strong>Email:</strong> $from</p>";
+$body .= "<p><strong>Booking Date:</strong> $booking_date</p>";
+$body .= "<p><strong>Booking Time:</strong> $booking_time</p>";
+$body .= "<p><strong>Number of People:</strong> $number_of_people</p>";
+$body .= "<p><strong>Event Type:</strong> $event_type</p>";
+$body .= "<p><strong>Message:</strong></p>";
+$body .= "<p>$cmessage</p>";
+$body .= "</body></html>";
 
-    $logo = 'img/logo.png';
-    $link = '#';
+// Kirim email
+$send = mail($to, $subject, $body, $headers);
 
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-	$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
-	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
-	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
-	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
-
-    $send = mail($to, $subject, $body, $headers);
+// Konfirmasi hasil
+if ($send) {
+    echo "Email sent successfully.";
+} else {
+    echo "Failed to send email.";
+}
 
 ?>
