@@ -24,6 +24,7 @@
 </head>
 
 <body>
+	
 
 	<!--================Offcanvus Menu Area =================-->
 	<div class="side_menu">
@@ -433,30 +434,50 @@
 					   </div>
 
 					   <!-- CONTACT FORM -->
-					   <form action="#" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
-
-							<!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
-							<h6 class="text-success">Your message has been sent successfully.</h6>
-							
-							<!-- IF MAIL NOT SENT -->
-							<h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
-
-							<div class="col-md-6 col-sm-6">
-								 <input type="text" class="form-control" id="cf-name" name="name" placeholder="Full name">
+					   <form class="row contact_form" id="contactForm" novalidate="novalidate">
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
 							</div>
-
-							<div class="col-md-6 col-sm-6">
-								 <input type="email" class="form-control" id="cf-email" name="email" placeholder="Email address">
+							<div class="form-group">
+								<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required>
 							</div>
-
-							<div class="col-md-12 col-sm-12">
-								 <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Subject">
-
-								 <textarea class="form-control" rows="6" id="cf-message" name="message" placeholder="Tell about your project"></textarea>
-
-								 <button type="submit" class="form-control" id="cf-submit" name="submit">Send Message</button>
+						</div>
+					
+						<!-- Bagian Book Tempat -->
+						<div class="col-md-6">
+							<div class="form-group">
+								<input type="date" class="form-control" id="booking_date" name="booking_date" placeholder="Select Date">
 							</div>
-					   </form>
+							<div class="form-group">
+								<input type="time" class="form-control" id="booking_time" name="booking_time" placeholder="Select Time">
+							</div>
+							<div class="form-group">
+								<input type="number" class="form-control" id="number_of_people" name="number_of_people" placeholder="Enter Number of People" min="1">
+							</div>
+						</div>
+					
+						<!-- Pilihan Jenis Acara -->
+						<div class="col-md-6">
+							<div class="form-group">
+								<select class="form-control" id="event_type" name="event_type">
+									<option value="" disabled selected>Select Event Type</option>
+									<option value="birthday">Birthday Party</option>
+									<option value="wedding">Wedding</option>
+									<option value="meeting">Meeting</option>
+									<option value="seminar">Seminar</option>
+									<option value="other">Other</option>
+								</select>
+							</div>
+						</div>
+					
+						<div class="col-md-12 text-right">
+							<button type="submit" class="btn submit_btn">Send via Email</button>
+							<a href="#" id="whatsappButton" class="btn submit_btn btn-green" target="_blank" style="margin-left: 10px;">Send via WhatsApp</a>
+						</div>
+					</form>
+					
+					
 				  </div>
 
 			 </div>
@@ -532,6 +553,86 @@
 	<!--================ End footer Area  =================-->
 
 
+	<script>
+		document.getElementById('whatsappButton').addEventListener('click', function() {
+			// Ambil data dari form
+			const name = document.getElementById('name').value;
+			const email = document.getElementById('email').value;
+			const bookingDate = document.getElementById('booking_date').value || 'Not Specified';
+			const bookingTime = document.getElementById('booking_time').value || 'Not Specified';
+			const numberOfPeople = document.getElementById('number_of_people').value || 'Not Specified';
+			const eventType = document.getElementById('event_type').value || 'Not Specified';
+	
+			// Format pesan WhatsApp
+			const whatsappMessage = `
+				*Booking Request*
+				Name: ${name}
+				Email: ${email}
+				Booking Date: ${bookingDate}
+				Booking Time: ${bookingTime}
+				Number of People: ${numberOfPeople}
+				Event Type: ${eventType}
+			`;
+	
+			// Nomor WhatsApp
+			const whatsappNumber = '628XXXXXXXXX'; // Ganti dengan nomor WhatsApp Anda
+	
+			// Buat URL WhatsApp
+			const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+			window.open(whatsappURL, '_blank');
+		});
+	</script>
+	
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+	<script type="text/javascript">
+		(function(){
+			emailjs.init({
+				publicKey: "ZfD6FwI3N4TdmtFSd",
+			});
+		})();
+	</script>
+
+	<script>
+		document.getElementById("contactForm").addEventListener("submit", function(e) {
+			e.preventDefault(); // Mencegah pengiriman formulir default
+
+			// Ambil data dari formulir
+			const formData = {
+				from_name: document.getElementById("name").value,
+				from_email: document.getElementById("email").value,
+				booking_date: document.getElementById("booking_date").value || "Not specified",
+				booking_time: document.getElementById("booking_time").value || "Not specified",
+				number_of_people: document.getElementById("number_of_people").value || "Not specified",
+				event_type: document.getElementById("event_type").value || "Not specified",
+			};
+
+			// Pesan yang dikirimkan
+			const message = `
+				Booking Details:
+				- Date: ${formData.booking_date}
+				- Time: ${formData.booking_time}
+				- Number of People: ${formData.number_of_people}
+				- Event Type: ${formData.event_type}
+			`;
+
+			// Kirim email via EmailJS
+			emailjs.send("service_mdvejuj", "template_j0uq6yn", {
+				from_name: formData.from_name,
+				from_email: formData.from_email,
+				message: message,
+			})
+			.then(
+				function(response) {
+					alert("Email sent successfully!");
+					document.getElementById("contactForm").reset(); // Reset formulir
+				},
+				function(error) {
+					alert("Failed to send email. Please try again.");
+					console.error("Error:", error);
+				}
+			);
+		});
+	</script>
 
 
 
