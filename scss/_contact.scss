@@ -80,13 +80,13 @@
 ============================================================================================ */
 
 
-/*============== Mantainence_area css ================*/
-.Mantainence_area{}
+/*============== contact_area css ================*/
+.contact_area{}
 .mapBox{
     height: 420px;
     margin-bottom: 80px;
 }
-.Mantainence_info{
+.contact_info{
     .info_item{
         position: relative;
         padding-left: 45px;
@@ -117,7 +117,7 @@
         }
     }
 }
-.Mantainence_form{
+.contact_form{
     .form-group{
         margin-bottom: 10px;
         .form-control{
@@ -150,7 +150,7 @@
 }
 
 
-/* Mantainence Success and error Area css
+/* Contact Success and error Area css
 ============================================================================================ */
 .modal-message{
     .modal-dialog{
@@ -191,5 +191,5 @@
         }
     }
 }
-/* End Mantainence Success and error Area css
+/* End Contact Success and error Area css
 ============================================================================================ */

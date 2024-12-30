@@ -86,7 +86,7 @@
         margin-bottom: 23px;
     }
     .header_area .navbar {
-        background: #8c603d;
+        background: #04091e;
         box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.7);
     }
     .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
@@ -186,12 +186,12 @@
     }
     /* End Blog page Area css
 	============================================================================================ */
-    /* Mantainence Page Area css
+    /* Contact Page Area css
 	============================================================================================ */
-    .Mantainence_info {
+    .contact_info {
         margin-bottom: 50px;
     }
-    /* End Mantainence page Area css
+    /* End Contact page Area css
 	============================================================================================ */
     /* Footer Area css
 	============================================================================================ */
@@ -322,38 +322,23 @@
 	============================================================================================ */
     /* Footer Area css
 	============================================================================================ */
-
-    #google-map,
-    .footer-info {
-      margin-bottom: 50px;
+    .footer-area {
+        padding: 70px 0px;
     }
-
-    footer {
-      padding: 60px 0;
-      padding-bottom: 60px;
+    .footer-bottom {
+        padding-top: 50px;
     }
-
-    .footer-open-hour {
-      right: 0;
-      bottom: 0;
-      margin-top: 30px;
+    /* End End Footer Area css
+	============================================================================================ */
+    .pad_top {
+        padding-top: 70px;
     }
-  }
-
-
-  @media only screen and (max-width: 580px) {
-    h1 {
-      font-size: 2.1em;
+    .pad_btm {
+        padding-bottom: 70px;
     }
-
-    h2 {
-      font-size: 1.8em;
+    .table_form {
+        padding: 50px 20px;
     }
-
-    .menu-thumb .menu-info {
-      top: 60%;
-    }
-  
 }
 
 @media (max-width:480px) {
