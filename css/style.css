@@ -33,7 +33,7 @@ Table of Content:
 13/ video  
 14/ features  
 15/ career  
-16/ contact 
+16/ Mantainence 
 17/ footer
 
 =====================================================================*/
@@ -1744,15 +1744,15 @@ button:focus {
 /* End Book Table Area css
 ============================================================================================ */
 
-/*============== contact_area css ================*/
+/*============== Mantainence_area css ================*/
 .mapBox {
   height: 420px;
   margin-bottom: 80px; }
 
-.contact_info .info_item {
+.Mantainence_info .info_item {
   position: relative;
   padding-left: 45px; }
-  .contact_info .info_item i {
+  .Mantainence_info .info_item i {
     position: absolute;
     left: 0;
     top: 0;
@@ -1760,23 +1760,23 @@ button:focus {
     line-height: 24px;
     color: #f42f2c;
     font-weight: 600; }
-  .contact_info .info_item h6 {
+  .Mantainence_info .info_item h6 {
     font-size: 16px;
     line-height: 24px;
     color: "Roboto", sans-serif;
     font-weight: bold;
     margin-bottom: 0px;
     color: #222222; }
-    .contact_info .info_item h6 a {
+    .Mantainence_info .info_item h6 a {
       color: #222222; }
-  .contact_info .info_item p {
+  .Mantainence_info .info_item p {
     font-size: 14px;
     line-height: 24px;
     padding: 2px 0px; }
 
-.contact_form .form-group {
+.Mantainence_form .form-group {
   margin-bottom: 10px; }
-  .contact_form .form-group .form-control {
+  .Mantainence_form .form-group .form-control {
     font-size: 13px;
     line-height: 26px;
     color: #999;
@@ -1784,26 +1784,26 @@ button:focus {
     font-family: "Roboto", sans-serif;
     border-radius: 0px;
     padding-left: 20px; }
-    .contact_form .form-group .form-control:focus {
+    .Mantainence_form .form-group .form-control:focus {
       box-shadow: none;
       outline: none; }
-    .contact_form .form-group .form-control.placeholder {
+    .Mantainence_form .form-group .form-control.placeholder {
       color: #999; }
-    .contact_form .form-group .form-control:-moz-placeholder {
+    .Mantainence_form .form-group .form-control:-moz-placeholder {
       color: #999; }
-    .contact_form .form-group .form-control::-moz-placeholder {
+    .Mantainence_form .form-group .form-control::-moz-placeholder {
       color: #999; }
-    .contact_form .form-group .form-control::-webkit-input-placeholder {
+    .Mantainence_form .form-group .form-control::-webkit-input-placeholder {
       color: #999; }
-  .contact_form .form-group textarea {
+  .Mantainence_form .form-group textarea {
     resize: none; }
-    .contact_form .form-group textarea.form-control {
+    .Mantainence_form .form-group textarea.form-control {
       height: 140px; }
-.contact_form .submit_btn {
+.Mantainence_form .submit_btn {
   margin-top: 20px;
   cursor: pointer; }
 
-/* Contact Success and error Area css
+/* Mantainence Success and error Area css
 ============================================================================================ */
 .modal-message .modal-dialog {
   position: absolute;
@@ -1836,7 +1836,7 @@ button:focus {
     .modal-message .modal-dialog .modal-content .modal-header p {
       display: block; }
 
-/* End Contact Success and error Area css
+/* End Mantainence Success and error Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
 /*----------------------------------------------------*/
@@ -3426,16 +3426,16 @@ h6 {
 ============================================================================================ */
 
 
-#contact .section-title {
+#Mantainence .section-title {
   padding-bottom: 0;
 }
 
-#contact .text-success,
-#contact .text-danger {
+#Mantainence .text-success,
+#Mantainence .text-danger {
   display: none;
 }
 
-#contact .form-control {
+#Mantainence .form-control {
   background: transparent;
   border: 0;
   border-bottom: 1px solid #dddddd;
@@ -3447,16 +3447,16 @@ h6 {
   transition: all ease-in-out 0.4s;
 }
 
-#contact .form-control:hover,
-#contact .form-control:focus {
+#Mantainence .form-control:hover,
+#Mantainence .form-control:focus {
   border-bottom-color: #c9c9c9;
 }
 
-#contact input {
+#Mantainence input {
   height: 55px;
 }
 
-#contact button#cf-submit {
+#Mantainence button#cf-submit {
   background: #ce3232;
   border-radius: 0;
   border: 0;
@@ -3465,7 +3465,7 @@ h6 {
   height: 50px;
 }
 
-#contact button#cf-submit:hover {
+#Mantainence button#cf-submit:hover {
   background: #292929;
   color: #ffffff;
 }

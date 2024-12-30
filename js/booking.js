@@ -1,4 +1,4 @@
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+document.getElementById("MantainenceForm").addEventListener("submit", function(e) {
     e.preventDefault(); // Mencegah pengiriman formulir default
 
     // Ambil data dari formulir
@@ -29,7 +29,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e) {
     .then(
         function(response) {
             alert("Email sent successfully!");
-            document.getElementById("contactForm").reset(); // Reset formulir
+            document.getElementById("MantainenceForm").reset(); // Reset formulir
         },
         function(error) {
             alert("Failed to send email. Please try again.");

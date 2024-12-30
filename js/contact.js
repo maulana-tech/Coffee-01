@@ -8,9 +8,9 @@ $(document).ready(function(){
         return this.optional(element) || /^\bcat\b$/.test(value)
     }, "type the correct answer -_-");
 
-    // validate contactForm form
+    // validate MantainenceForm form
     $(function() {
-        $('#contactForm').validate({
+        $('#MantainenceForm').validate({
             rules: {
                 name: {
                     required: true,
@@ -58,10 +58,10 @@ $(document).ready(function(){
                 $(form).ajaxSubmit({
                     type:"POST",
                     data: $(form).serialize(),
-                    url:"contact_process.php",
+                    url:"Mantainence_process.php",
                     success: function() {
-                        $('#contactForm :input').attr('disabled', 'disabled');
-                        $('#contactForm').fadeTo( "slow", 1, function() {
+                        $('#MantainenceForm :input').attr('disabled', 'disabled');
+                        $('#MantainenceForm').fadeTo( "slow", 1, function() {
                             $(this).find(':input').attr('disabled', 'disabled');
                             $(this).find('label').css('cursor','default');
                             $('#success').fadeIn()
@@ -70,7 +70,7 @@ $(document).ready(function(){
                         })
                     },
                     error: function() {
-                        $('#contactForm').fadeTo( "slow", 1, function() {
+                        $('#MantainenceForm').fadeTo( "slow", 1, function() {
                             $('#error').fadeIn()
                             $('.modal').modal('hide');
 		                	$('#error').modal('show');
