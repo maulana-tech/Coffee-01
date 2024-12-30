@@ -8,6 +8,7 @@
 	<link rel="icon" href="img/favicon.png" type="">
 	<title>Semanak Melia</title>
 	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
@@ -143,7 +144,7 @@
 							delightful culinary experiences. Located at the heart of the city, our cafe is designed to be a haven for coffee enthusiasts, 
 							food lovers, and those seeking a warm and welcoming atmosphere.
 						</p>
-						<a class="main_btn" href="#">check our menu</a>
+						<a class="main_btn" href="menu.html">check our menu</a>
 					</div>
 				</div>
 				<div class="col-lg-6">
@@ -473,7 +474,9 @@
 					
 						<div class="col-md-12 text-right">
 							<button type="submit" class="btn submit_btn">Send via Email</button>
-							<a href="#" id="whatsappButton" class="btn submit_btn btn-green" target="_blank" style="margin-left: 10px;">Send via WhatsApp</a>
+							<a href="https://wa.me/6281575196558" id="whatsappButton" class="btn submit_btn btn-green" style="margin-left: 10px;">
+								<i class="fab fa-whatsapp"></i> chat via WhatsApp
+							</a>
 						</div>
 					</form>
 					
@@ -490,44 +493,16 @@
 		<div class="container">
 			 <div class="row">
 
-				  <div class="col-md-3 col-sm-8">
-					   <div class="footer-info">
-							<div class="section-title">
-								 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Find us</h2>
-							</div>
-							<address class="wow fadeInUp" data-wow-delay="0.4s">
-								 <p>123 nulla a cursus rhoncus,<br> augue sem viverra 10870<br>id ultricies sapien</p>
-							</address>
-					   </div>
-				  </div>
-
-				  <div class="col-md-3 col-sm-8">
-					   <div class="footer-info">
-							<div class="section-title">
-								 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Reservation</h2>
-							</div>
-							<address class="wow fadeInUp" data-wow-delay="0.4s">
-								 <p>090-080-0650 | 090-070-0430</p>
-								 <p><a href="mailto:info@company.com">info@company.com</a></p>
-								 <p>LINE: eatery247 </p>
-							</address>
-					   </div>
-				  </div>
-
 				  <div class="col-md-4 col-sm-8">
 					   <div class="footer-info footer-open-hour">
 							<div class="section-title">
 								 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Open Hours</h2>
 							</div>
 							<div class="wow fadeInUp" data-wow-delay="0.4s">
-								 <p>Monday: Closed</p>
+								 <p>Sunday: Closed</p>
 								 <div>
-									  <strong>Tuesday to Friday</strong>
-									  <p>7:00 AM - 9:00 PM</p>
-								 </div>
-								 <div>
-									  <strong>Saturday - Sunday</strong>
-									  <p>11:00 AM - 10:00 PM</p>
+									  <strong>Monday to Saturday</strong>
+									  <p>10:00 AM - 10:00 PM</p>
 								 </div>
 							</div>
 					   </div>
@@ -553,86 +528,14 @@
 	<!--================ End footer Area  =================-->
 
 
-	<script>
-		document.getElementById('whatsappButton').addEventListener('click', function() {
-			// Ambil data dari form
-			const name = document.getElementById('name').value;
-			const email = document.getElementById('email').value;
-			const bookingDate = document.getElementById('booking_date').value || 'Not Specified';
-			const bookingTime = document.getElementById('booking_time').value || 'Not Specified';
-			const numberOfPeople = document.getElementById('number_of_people').value || 'Not Specified';
-			const eventType = document.getElementById('event_type').value || 'Not Specified';
-	
-			// Format pesan WhatsApp
-			const whatsappMessage = `
-				*Booking Request*
-				Name: ${name}
-				Email: ${email}
-				Booking Date: ${bookingDate}
-				Booking Time: ${bookingTime}
-				Number of People: ${numberOfPeople}
-				Event Type: ${eventType}
-			`;
-	
-			// Nomor WhatsApp
-			const whatsappNumber = '628XXXXXXXXX'; // Ganti dengan nomor WhatsApp Anda
-	
-			// Buat URL WhatsApp
-			const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-			window.open(whatsappURL, '_blank');
-		});
-	</script>
-	
 	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-	<script type="text/javascript">
-		(function(){
-			emailjs.init({
-				publicKey: "ZfD6FwI3N4TdmtFSd",
-			});
-		})();
-	</script>
-
-	<script>
-		document.getElementById("contactForm").addEventListener("submit", function(e) {
-			e.preventDefault(); // Mencegah pengiriman formulir default
-
-			// Ambil data dari formulir
-			const formData = {
-				from_name: document.getElementById("name").value,
-				from_email: document.getElementById("email").value,
-				booking_date: document.getElementById("booking_date").value || "Not specified",
-				booking_time: document.getElementById("booking_time").value || "Not specified",
-				number_of_people: document.getElementById("number_of_people").value || "Not specified",
-				event_type: document.getElementById("event_type").value || "Not specified",
-			};
-
-			// Pesan yang dikirimkan
-			const message = `
-				Booking Details:
-				- Date: ${formData.booking_date}
-				- Time: ${formData.booking_time}
-				- Number of People: ${formData.number_of_people}
-				- Event Type: ${formData.event_type}
-			`;
-
-			// Kirim email via EmailJS
-			emailjs.send("service_mdvejuj", "template_j0uq6yn", {
-				from_name: formData.from_name,
-				from_email: formData.from_email,
-				message: message,
-			})
-			.then(
-				function(response) {
-					alert("Email sent successfully!");
-					document.getElementById("contactForm").reset(); // Reset formulir
-				},
-				function(error) {
-					alert("Failed to send email. Please try again.");
-					console.error("Error:", error);
-				}
-			);
-		});
-	</script>
+		<script type="text/javascript">
+			(function(){
+				emailjs.init({
+					publicKey: "ZfD6FwI3N4TdmtFSd",
+				});
+			})();
+		</script>
 
 
 
@@ -649,8 +552,8 @@
 	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-	<script src="vendors/counter-up/jquery.counterup.js"></script>
-	<script src="js/mail-script.js"></script>
+	<script src="vendors/counter-up/jquery.counterup.js"></script>	
+	<script src="booking.js"></script>
 	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
 	<script src="vendors/swiper/js/swiper.min.js"></script>
 	<script src="vendors/scroll/jquery.mCustomScrollbar.js"></script>

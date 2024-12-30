@@ -9,6 +9,7 @@
 	<title>Menu</title>
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<link rel="stylesheet" href="vendors/linericon/style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
@@ -112,40 +113,40 @@
 					<div class="menu_list">
 						<ul class="list">
 							<li>
-								<h4>Wonton with french fries
-									<span>$5.00</span>
+								<h4>Chicken Steak ala Mertua
+									<span>Rp 30.000</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Chicken Steak/Sauce/Fried Fries</p>
 							</li>
 							<li>
-								<h4>Roasted Red Potatoes with Rosemary
-									<span>$5.00</span>
+								<h4>Nasi Goreng Jawa
+									<span>Rp 30.000</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Nasi Goreng and Fried Egg</p>
 							</li>
 							<li>
-								<h4>Bacon-Wrapped Shrimp with Garlic
-									<span>$5.00</span>
+								<h4>Soup Telur Tahu + Rice
+									<span>Rp 27.000</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Soup/Telur/Tahu/Rice</p>
 							</li>
 							<li>
-								<h4>Apple Smoked Chicken with White Sauce
-									<span>$5.00</span>
+								<h4>Kopi susu Gula Aren
+									<span>Rp 22.000</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Esspreso/Palm Sugar/Milk</p>
 							</li>
 							<li>
-								<h4>Imported Oysters Grill (5 Pieces)
-									<span>$5.00</span>
+								<h4>Es Coklat
+									<span>Rp 9.500</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Coklat/Susu</p>
 							</li>
 							<li>
-								<h4>Apple Smoked Chicken with White Sauce
-									<span>$5.00</span>
+								<h4>Lyche Tea
+									<span>Rp 22.000</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Lcyche syrup/Tea/Fresh Lecyche</p>
 							</li>
 						</ul>
 					</div>
@@ -155,40 +156,22 @@
 					<div class="menu_list pr-0">
 						<ul class="list">
 							<li>
-								<h4>Wonton with french fries
-									<span>$5.00</span>
+								<h4>SePlatter
+									<span>Rp 25.000</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Mendoan/Bakwan/Tahu/Sauce</p>
 							</li>
 							<li>
-								<h4>Roasted Red Potatoes with Rosemary
-									<span>$5.00</span>
+								<h4>Roti Panggang
+									<span>Rp 25.000</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Roti Coklat/Hazelnut/etc</p>
 							</li>
 							<li>
-								<h4>Bacon-Wrapped Shrimp with Garlic
-									<span>$5.00</span>
+								<h4>Kentang Goreng
+									<span>Rp 25.000</span>
 								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
-							</li>
-							<li>
-								<h4>Apple Smoked Chicken with White Sauce
-									<span>$5.00</span>
-								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
-							</li>
-							<li>
-								<h4>Imported Oysters Grill (5 Pieces)
-									<span>$5.00</span>
-								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
-							</li>
-							<li>
-								<h4>Apple Smoked Chicken with White Sauce
-									<span>$5.00</span>
-								</h4>
-								<p>Wonthon/Potato/Fries/Sauce</p>
+								<p>Fried Fries/Sauce</p>
 							</li>
 						</ul>
 					</div>
@@ -218,107 +201,104 @@
 
 			<div class="book_table_inner row align-items-center">
 				<div class="offset-lg-2 offset-md-1 col-lg-8 col-md-10">
-					<div class="table_form white">
-						<form class="book_table_form row" action="#">
-							<div class="form-group col-md-12">
-								<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+						<form class="row contact_form" id="contactForm" novalidate="novalidate">
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address" required>
+								</div>
 							</div>
-							<div class="form-group col-md-12">
-								<input type="email" class="form-control" id="email" name="email" placeholder="Enter email address">
+						
+							<!-- Bagian Book Tempat -->
+							<div class="col-md-6">
+								<div class="form-group">
+									<input type="date" class="form-control" id="booking_date" name="booking_date" placeholder="Select Date">
+								</div>
+								<div class="form-group">
+									<input type="time" class="form-control" id="booking_time" name="booking_time" placeholder="Select Time">
+								</div>
+								<div class="form-group">
+									<input type="number" class="form-control" id="number_of_people" name="number_of_people" placeholder="Enter Number of People" min="1">
+								</div>
 							</div>
-							<div class="form-group col-md-12">
-								<input type="text" class="form-control" id="subject" name="subject" placeholder="Phone Number">
-							</div>
-							<div class="form-group col-md-12">
-								<input type="text" class="form-control" id="subject" name="subject" placeholder="Select date & time">
-							</div>
-							<div class="form-group col-md-12">
-								<div class="form-select">
-									<select>
-										<option value="1">Select event</option>
-										<option value="1">Select event Dhaka</option>
-										<option value="1">Select event Dilli</option>
-										<option value="1">Select event Newyork</option>
-										<option value="1">Select event Islamabad</option>
+						
+							<!-- Pilihan Jenis Acara -->
+							<div class="col-md-6">
+								<div class="form-group">
+									<select class="form-control" id="event_type" name="event_type">
+										<option value="" disabled selected>Select Event Type</option>
+										<option value="birthday">Birthday Party</option>
+										<option value="wedding">Wedding</option>
+										<option value="meeting">Meeting</option>
+										<option value="seminar">Seminar</option>
+										<option value="other">Other</option>
 									</select>
 								</div>
 							</div>
-							<div class="form-group col-md-12">
-								<button type="submit" value="submit" class="btn submit_btn form-control">Make Reservation</button>
+						
+							<div class="col-md-12 text-right">
+								<button type="submit" class="btn submit_btn">Send via Email</button>
+								<a href="https://wa.me/6281575196558" id="whatsappButton" class="btn submit_btn btn-green" style="margin-left: 10px;">
+									<i class="fab fa-whatsapp"></i> chat via WhatsApp
+								</a>
 							</div>
 						</form>
-					</div>
 				</div>
+			</div>
 			</div>
 		</div>
 	</section>
 	<!--================End Book Table Area =================-->
 
 	<!--================ start footer Area  =================-->
-	<footer class="footer-area p_120">
+	<footer id="footer" data-stellar-background-ratio="0.5">
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-2  col-md-6 col-sm-6">
-					<div class="single-footer-widget tp_widgets">
-						<h6 class="footer_title">Quick Links</h6>
-						<ul class="list">
-							<li>
-								<a href="#">Jobs</a>
-							</li>
-							<li>
-								<a href="#">Brand Assets</a>
-							</li>
-							<li>
-								<a href="#">Investor Relations</a>
-							</li>
-							<li>
-								<a href="#">Terms of Service</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<aside class="f_widget news_widget">
-						<div class="f_title">
-							<h3 class="footer_title">Newsletter</h3>
-						</div>
-						<p>Stay updated with our latest trends</p>
-						<div id="mc_embed_signup">
-							<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get" class="subscribe_form relative">
-								<div class="input-group d-flex flex-row">
-									<input name="EMAIL" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
-									 required="" type="email">
-									<button class="btn sub-btn">
-										<span class="lnr lnr-arrow-right"></span>
-									</button>
-								</div>
-								<div class="mt-10 info"></div>
-							</form>
-						</div>
-					</aside>
-				</div>
-			</div>
-			<div class="row footer-bottom d-flex justify-content-between align-items-center">
-				<p class="col-lg-8 col-md-8 footer-text m-0">
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="" target="_blank">Maulana</a>
-				</p>
-				<div class="col-lg-4 col-md-4 footer-social">
-					<a href="#">
-						<i class="fa fa-instagram"></i>
-					</a>
-					<a href="#">
-						<i class="fa fa-twitter"></i>
-					</a>
-				</div>
-			</div>
+			 <div class="row">
+
+				  <div class="col-md-4 col-sm-8">
+					   <div class="footer-info footer-open-hour">
+							<div class="section-title">
+								 <h2 class="wow fadeInUp" data-wow-delay="0.2s">Open Hours</h2>
+							</div>
+							<div class="wow fadeInUp" data-wow-delay="0.4s">
+								 <p>Sunday: Closed</p>
+								 <div>
+									  <strong>Monday to Saturday</strong>
+									  <p>10:00 AM - 10:00 PM</p>
+								 </div>
+							</div>
+					   </div>
+				  </div>
+
+				  <div class="col-md-2 col-sm-4">
+					   <ul class="wow fadeInUp social-icon" data-wow-delay="0.4s">
+							<li><a href="https://www.tiktok.com/@semanakcoffee?is_from_webapp=1&sender_device=pc" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+							<li><a href="https://www.instagram.com/semanak_meila/" class="fa fa-instagram"></a></li>
+							<li><a href="https://maps.app.goo.gl/VyuiEhyTn5hvdfqd9" class="fa fa-google"></a></li>
+					   </ul>
+
+					   <div class="wow fadeInUp copyright-text" data-wow-delay="0.8s"> 
+							<p><br>Copyright &copy; 2024 <br>Semanak Meila Coffee & Eatery 
+							
+							<br><br>By : <a href="https://github.com/maulana-tech" class="fa fa-github"> maulana-tech</a></p>
+					   </div>
+				  </div>
+				  
+			 </div>
 		</div>
-	</footer>
+   </footer>
 	<!--================ End footer Area  =================-->
 
-
-
-
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+		<script type="text/javascript">
+			(function(){
+				emailjs.init({
+					publicKey: "ZfD6FwI3N4TdmtFSd",
+				});
+			})();
+		</script>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -334,7 +314,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	<script src="js/jquery.ajaxchimp.min.js"></script>
 	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
 	<script src="vendors/counter-up/jquery.counterup.js"></script>
-	<script src="js/mail-script.js"></script>
+	<script src="js/booking.js"></script>
 	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
 	<script src="vendors/swiper/js/swiper.min.js"></script>
 	<script src="vendors/scroll/jquery.mCustomScrollbar.js"></script>
